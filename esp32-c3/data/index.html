@@ -4,13 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cnc3018 control panel</title>
+  <title>ESP32 Web Server</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
   <div class="container">
-    <button id="myButton">Нажми меня!</button>
+    <!-- Крестовина -->
+    <div class="cross">
+      <button class="btn up">↑</button>
+      <button class="btn left">←</button>
+      <button class="btn center">●</button>
+      <button class="btn right">→</button>
+      <button class="btn down">↓</button>
+      <button class="btn Zup">↑</button>
+      <button class="btn Zdown">↓</button>
+    </div>
+  </div>
+
+  <div class="container"
+    <!-- Терминал -->
+    <div class="terminal">
+      <div class="terminal-output" id="terminalOutput"></div>
+      <div class="terminal-input-line">
+        <span class="prompt">&gt;</span>
+        <input type="text" id="terminalInput" placeholder="Введите команду...">
+        <button id="sendBtn">Отправить</button>
+      </div>
+    </div>
   </div>
   <script src="/script.js"></script>
 </body>
