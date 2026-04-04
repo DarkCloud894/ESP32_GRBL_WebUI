@@ -11,35 +11,37 @@
 <body>
   <div class="dashboard">
     <div class="scrollable-container">
-
-    <!-- КАРТОЧКА ДЖОЙСТИКА (КРЕСТОВИНА) -->
-    <div class="control-card" id="joystickCard">
-      <div class="card-header">
-        <h3>🎮 ДЖОЙСТИК</h3>
-        <button class="collapse-btn" data-target="joystick">Свернуть</button>
+      <!-- КАРТОЧКА ДЖОЙСТИКА (КРЕСТОВИНА) -->
+      <div class="control-card" id="joystickCard">
+        <div class="card-header">
+          <h3>🎮 ДЖОЙСТИК</h3>
+          <button class="collapse-btn" data-target="joystick">Свернуть</button>
+        </div>
+        <div class="card-body">
+          <div class="cross">
+            <button class="btn up">↑</button>
+            <button class="btn left">←</button>
+            <button class="btn center">●</button>
+            <button class="btn right">→</button>
+            <button class="btn down">↓</button>
+            <button class="btn Zup">▲ Z</button>
+            <button class="btn Zdown">▼ Z</button>
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        <div class="cross">
-          <button class="btn up">↑</button>
-          <button class="btn left">←</button>
-          <button class="btn center">●</button>
-          <button class="btn right">→</button>
-          <button class="btn down">↓</button>
-          <button class="btn Zup">▲ Z</button>
-          <button class="btn Zdown">▼ Z</button>
+      <div class="control-card" id="spindleCard">
+        <div class="card-header">
+          <h3>⚙️ ШПИНДЕЛЬ </h3>
+          <button class="collapse-btn" data-target="spindle">Свернуть</button>
+        </div>
+        <div class="card-body">
+          <div class="spindleBar">
+            <input type="range" min="0" max="1000" value="500" id="spindleSlider">
+            <output id="spindleSliderValue">500</output>
+          </div>
         </div>
       </div>
     </div>
-    <div class="control-card" id="spindleCard">
-      <h3>⚙️ ШПИНДЕЛЬ </h3>
-      <button class="collapse-btn" data-target="spindle">Свернуть</button>
-    </div>
-    <div class="card-body">
-      <div class="spindleBar">
-        
-      </div>
-    </div>
-</div>
 
     <div class="scrollable-container">
       <!-- КАРТОЧКА ТЕРМИНАЛА -->

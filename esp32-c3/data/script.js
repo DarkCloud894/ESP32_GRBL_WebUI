@@ -125,3 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
   addToTerminal('ESP32 Remote Terminal | WebSocket ready', true);
   addToTerminal('Используйте кнопки джойстика или вводите команды вручную', true);
 });
+
+// Реализация работы слайдера
+const slider = document.getElementById('spindleSlider');
+const output = document.getElementById('spindleSliderValue');
+
+slider.addEventListener('input', () => {
+  output.value = slider.value;
+});

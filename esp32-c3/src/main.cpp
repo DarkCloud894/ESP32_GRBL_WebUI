@@ -4,8 +4,11 @@
 #include <LittleFS.h>
 #include <WiFi.h>
 
-const char *ssid = "PISOS-PRO";
-const char *password = "pisos410";
+//const char *ssid = "PISOS-PRO";
+//const char *password = "pisos410";
+const char *ssid = "Sus";
+const char *password = "ggzo1427";
+
 
 AsyncWebServer server(80);
 AsyncWebSocket ws("/ws"); // WebSocket endpoint по пути /ws
