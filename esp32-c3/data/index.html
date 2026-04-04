@@ -3,36 +3,66 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ESP32 Web Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>ESP32 Управление | Джойстик + Терминал</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-  <div class="container">
-    <!-- Крестовина -->
-    <div class="cross">
-      <button class="btn up">↑</button>
-      <button class="btn left">←</button>
-      <button class="btn center">●</button>
-      <button class="btn right">→</button>
-      <button class="btn down">↓</button>
-      <button class="btn Zup">↑</button>
-      <button class="btn Zdown">↓</button>
-    </div>
-  </div>
+  <div class="dashboard">
+    <div class="scrollable-container">
 
-  <div class="container"
-    <!-- Терминал -->
-    <div class="terminal">
-      <div class="terminal-output" id="terminalOutput"></div>
-      <div class="terminal-input-line">
-        <span class="prompt">&gt;</span>
-        <input type="text" id="terminalInput" placeholder="Введите команду...">
-        <button id="sendBtn">Отправить</button>
+    <!-- КАРТОЧКА ДЖОЙСТИКА (КРЕСТОВИНА) -->
+    <div class="control-card" id="joystickCard">
+      <div class="card-header">
+        <h3>🎮 ДЖОЙСТИК</h3>
+        <button class="collapse-btn" data-target="joystick">Свернуть</button>
+      </div>
+      <div class="card-body">
+        <div class="cross">
+          <button class="btn up">↑</button>
+          <button class="btn left">←</button>
+          <button class="btn center">●</button>
+          <button class="btn right">→</button>
+          <button class="btn down">↓</button>
+          <button class="btn Zup">▲ Z</button>
+          <button class="btn Zdown">▼ Z</button>
+        </div>
+      </div>
+    </div>
+    <div class="control-card" id="spindleCard">
+      <h3>⚙️ ШПИНДЕЛЬ </h3>
+      <button class="collapse-btn" data-target="spindle">Свернуть</button>
+    </div>
+    <div class="card-body">
+      <div class="spindleBar">
+        
+      </div>
+    </div>
+</div>
+
+    <div class="scrollable-container">
+      <!-- КАРТОЧКА ТЕРМИНАЛА -->
+      <div class="control-card" id="terminalCard">
+        <div class="card-header">
+          <h3>📟 ТЕРМИНАЛ</h3>
+          <button class="collapse-btn" data-target="terminal">Свернуть</button>
+        </div>
+        <div class="card-body">
+          <div class="terminal">
+            <div class="terminal-output" id="terminalOutput"></div>
+            <div class="terminal-input-line">
+              <span class="prompt">&gt;</span>
+              <input type="text" id="terminalInput" placeholder="Введите команду (status, led_on, speed=100 ...)"
+                autocomplete="off">
+              <button id="sendBtn">Отправить</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
   <script src="/script.js"></script>
 </body>
 
